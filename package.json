@@ -29,6 +29,7 @@
       "jsonwebtoken": "^8.5.1",
       "pg": "^8.0.0",
       "reflect-metadata": "^0.1.10",
+      "serve-favicon": "^2.5.0",
       "ts-node-dev": "^1.0.0-pre.44",
       "typeorm": "0.2.24"
    }
