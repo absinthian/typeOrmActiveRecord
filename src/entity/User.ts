@@ -1,7 +1,7 @@
 import {Entity, PrimaryGeneratedColumn, Column, BaseEntity} from "typeorm";
 
 //ActiveRecord
-@Entity('USER')
+@Entity()
 export class User extends BaseEntity{
 
     @PrimaryGeneratedColumn()
