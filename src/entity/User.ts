@@ -1,13 +1,14 @@
-import {Entity, PrimaryGeneratedColumn, Column, BaseEntity} from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, OneToMany } from "typeorm";
+import { Photo } from "./Photo";
 
 //ActiveRecord
 @Entity()
-export class User extends BaseEntity{
+export class User extends BaseEntity {
 
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({type: "text", default: "firstName"})
+    @Column({ type: "text", default: "firstName" })
     firstName: string;
 
     @Column()
@@ -16,7 +17,10 @@ export class User extends BaseEntity{
     @Column()
     age: number;
 
-    @Column()
+    @Column({ nullable: true })
     phone: number;
+
+    @OneToMany(type => Photo, photo => photo.user)
+    photos: Photo[];
 
 }
